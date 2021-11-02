@@ -1,7 +1,8 @@
-'use strict'
+"use strict";
 
 module.exports = async (fastify, opts) => {
-    fastify.get('/', async (request, reply) => {
-        return reply.sendFile('hello.html')
-    })
-}
+  fastify.get('/', async (request, reply) => {
+    const { greeting = "Hello " } = request.query;
+    return reply.view("hello.hbs", { greeting });
+  });
+};
