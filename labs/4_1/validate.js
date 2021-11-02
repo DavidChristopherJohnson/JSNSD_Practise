@@ -39,9 +39,6 @@ async function layoutCheck () {
     'color:\\s+yellow;\\s+font-size:\\s+2rem;\\s+font-family:\\s+sans-serif\\s+}\\s+' + 
     '<\\/style>')
 
-  console.log(markers);
-  console.log(html);
-
   assert.match(
     html,
     markers,
